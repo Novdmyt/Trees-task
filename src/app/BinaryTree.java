@@ -3,7 +3,21 @@ package app;
 public class BinaryTree {
     TreeNode root;
 
+    public static void main(String[] args) {
+        BinaryTree tree = new BinaryTree();
 
+        System.out.println("Inorder traversal:");
+        tree.inorderTraversal(tree.root);
+        System.out.println();
+
+        System.out.println("Preorder traversal:");
+        tree.preorderTraversal(tree.root);
+        System.out.println();
+
+        System.out.println("Postorder traversal:");
+        tree.postorderTraversal(tree.root);
+        System.out.println();
+    }
 
     public BinaryTree() {
 
@@ -29,6 +43,7 @@ public class BinaryTree {
             inorderTraversal(node.right);
         }
     }
+
     public void preorderTraversal(TreeNode node) {
         if (node != null) {
             System.out.print(node.key + " ");
@@ -36,6 +51,7 @@ public class BinaryTree {
             preorderTraversal(node.right);
         }
     }
+
     public void postorderTraversal(TreeNode node) {
         if (node != null) {
             postorderTraversal(node.left);
