@@ -36,9 +36,11 @@ public class BinaryTree {
             preorderTraversal(node.right);
         }
     }
-
-
-
-
-
+    public void postorderTraversal(TreeNode node) {
+        if (node != null) {
+            postorderTraversal(node.left);
+            postorderTraversal(node.right);
+            System.out.print(node.key + " ");
+        }
+    }
 }
