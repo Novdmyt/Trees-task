@@ -1,12 +1,12 @@
 package app;
 
 public class TreeNode {
-    int val;
+    int key;
     TreeNode left;
     TreeNode right;
 
-    public TreeNode(int val) {
-        this.val = val;
+    public TreeNode(int key) {
+        this.key = key;
         this.left = null;
         this.right = null;
     }
